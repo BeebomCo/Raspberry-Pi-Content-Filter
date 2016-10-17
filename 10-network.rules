@@ -1,0 +1,9 @@
+# /etc/udev/rules.d/10-network.rules
+
+# Set up the built-in WiFi module as wlan0. Replace the XX:XX:XX etc. with the
+# built-in module's MAC address
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="XX:XX:XX:XX:XX:XX", NAME="wlan0"
+
+# Set up the USB WiFi dongle as wlan1. Replace the YY:YY:YY etc. with the
+# USB dongle's MAC address
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="YY:YY:YY:YY:YY:YY", NAME="wlan1"
